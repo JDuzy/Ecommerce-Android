@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/ic_bedu_logo.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/ic_email.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/ic_home.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/ic_lock.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/ic_person.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/nav_item_drawable.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/nav_item_text.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/drawable/navigation_menu_fragment.xml" value="0.3828125" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/activity_registration.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/appbar_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/bottom_navigation.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/bottom_navigation_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/fragment_cart.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/fragment_login.xml" value="0.35260416666666666" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/fragment_product_details.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/fragment_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/fragment_registration.xml" value="0.35260416666666666" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/item_contact.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/item_product.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/navigation_menu_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/layout/options_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/menu/navigation_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Desktop/ClasesKotlin/ProyectoBedu/app/src/main/res/menu/toolbar_menu.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.36666666666666664" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
