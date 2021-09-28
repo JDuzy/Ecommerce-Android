@@ -13,7 +13,7 @@ https://developer.android.com/studio
 - Activities y Layouts
 - Listas
 - Fragments
-- - Navigation Component
+- Navigation Component
 - Material Design
 - Menus
 - Gradle y preparación para el lanzamiento
