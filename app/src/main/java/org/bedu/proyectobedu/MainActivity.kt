@@ -15,7 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 const val BEDU_URL = "https://www.bedu.org"
 
 class MainActivity : AppCompatActivity() {
-    lateinit var bottom: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
