@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_gravity="start"
-    android:background="@color/white"
+    android:background="@color/secondaryTextColor"
     app:itemIconTint="@color/nav_item"
     app:itemTextColor="@color/nav_item_text"
     app:menu="@menu/navigation_menu"

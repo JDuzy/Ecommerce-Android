@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingVertical="15dp"
-    android:background="@color/white">
+    android:background="@color/secondaryTextColor">
 
     <ImageView
         android:id="@+id/productImage"
@@ -52,8 +52,6 @@
         android:layout_marginBottom="8dp"
         android:text="Product Name"
         android:textSize="16sp"
-        android:textColor="@color/background"
-
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline4" />
@@ -66,8 +64,7 @@
         android:text="Price"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        android:textColor="@color/background"/>
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -78,8 +75,8 @@
         android:numStars="5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/priceText"
-        android:progressTint="@color/orangeBedu"
-        android:progressBackgroundTint="@color/background"/>
+        android:progressTint="@color/primaryColor"
+        android:progressBackgroundTint="@color/secondaryColor"/>
 
     <TextView
         android:id="@+id/ratings"
@@ -90,7 +87,7 @@
         android:text="50"
         app:layout_constraintStart_toEndOf="@+id/ratingBar"
         app:layout_constraintTop_toBottomOf="@+id/priceText"
-        android:textColor="@color/background" />
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,6 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:paddingLeft="@dimen/fragment_horizontal_margin"
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
@@ -18,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
         android:text="@string/registrate_text"
-        android:textColor="@color/orangeBedu"
+        android:textColor="@color/primaryColor"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +46,6 @@
         android:layout_marginTop="80dp"
         android:hint="@string/name_input"
         android:nextFocusDown="@id/registrationEmailEditText"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in_button">
@@ -70,7 +68,6 @@
         android:layout_marginTop="20dp"
         android:hint="@string/email_input"
         android:nextFocusDown="@id/registrationPhoneEditText"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrationNameEditTextLayout">
@@ -93,7 +90,6 @@
         android:layout_marginTop="20dp"
         android:hint="@string/phone_input"
         android:nextFocusDown="@id/registrationPhoneEditText"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrationEmailEditTextLayout">
@@ -116,7 +112,6 @@
         android:layout_marginTop="20dp"
         android:hint="@string/password_input"
         android:nextFocusDown="@id/registrationBtn"
-        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrationPhoneEditTextLayout">
@@ -137,13 +132,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/orangeBedu"
+
         android:text="@string/registrate_btn"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationPasswordEditTextLayout">
+        app:layout_constraintTop_toBottomOf="@+id/registrationPasswordEditTextLayout"
+        android:textColor="@color/secondaryTextColor">
 
     </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

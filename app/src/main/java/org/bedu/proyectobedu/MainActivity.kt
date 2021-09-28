@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         when(item.itemId){
             R.id.itemSearch -> Toast.makeText(this, "La funcionalidad de búsqueda esta siendo implementada", Toast.LENGTH_SHORT).show()
             R.id.itemHelp -> {
+                //Navigates to the specified URL on main browser
                 val browse = Intent( Intent.ACTION_VIEW , Uri.parse( BEDU_URL ) )
                 startActivity( browse )
             }
