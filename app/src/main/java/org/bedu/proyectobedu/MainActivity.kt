@@ -6,13 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import android.view.ViewStub
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.bedu.proyectobedu.home.HomeFragment
 
 const val BEDU_URL = "https://www.bedu.org"
 
@@ -23,14 +21,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val appBar = findViewById<Toolbar>(R.id.appBar)
-        this.setSupportActionBar(appBar)
+        //Set ups custom appBar
+        this.setSupportActionBar(findViewById(R.id.appBar))
 
-        setUpBottomNavigation()
-        }
+        //Set ups BottomNav with NavController, when BottomNav is inflated
+        val navController = findNavController(R.id.my_nav_host_fragment)
+        val bottomNavStub = findViewById<ViewStub>(R.id.navigation)
+        bottomNavStub.setOnInflateListener(ViewStub.OnInflateListener { viewStub, view ->
+            findViewById<BottomNavigationView>(R.id.navigation)?.setupWithNavController(navController)
+        })
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.action_menu, menu)
+        menuInflater.inflate(R.menu.options_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -45,17 +49,4 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun setUpBottomNavigation() {
-        bottom = findViewById(R.id.navigation)
-        bottom.setOnItemSelectedListener {
-            val transaction = supportFragmentManager.beginTransaction()
-            when (it.itemId) {
-                R.id.action_home -> transaction.replace(R.id.my_nav_host_fragment, HomeFragment(), "Home fragment")
-                R.id.action_cart -> transaction.replace(R.id.my_nav_host_fragment, CartFragment(), "Cart fragment")
-                R.id.action_profile -> transaction.replace(R.id.my_nav_host_fragment, ProfileFragment(), "Profile fragment")
-            }
-            transaction.commit()
-            return@setOnItemSelectedListener true
-        }
-    }
 }

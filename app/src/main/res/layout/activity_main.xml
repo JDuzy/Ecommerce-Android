@@ -23,13 +23,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="@string/app_name"
-            app:menu="@menu/action_menu"
+            app:menu="@menu/options_menu"
             />
 
     </com.google.android.material.appbar.AppBarLayout>
     <!--<ViewStub
-        android:id="@+id/options_menu_stub"
-        android:inflatedId="@+id/options_menu_stub"
+        android:id="@+id/optionsMenu"
+        android:inflatedId="@+id/optionsMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,8 @@
         android:layout="@layout/options_layout">
     </ViewStub>-->
 
-    <androidx.fragment.app.FragmentContainerView
+    <fragment
+        app:navGraph="@navigation/mobile_navigation"
         android:id="@+id/my_nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
@@ -49,10 +50,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintBottom_toTopOf="@id/navigation"
-        app:navGraph="@navigation/mobile_navigation" />
+        />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:visibility="gone"
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
+        android:visibility="visible"
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -64,11 +65,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHeight_percent="0.075"
-        />
+        />-->
 
-    <!--<ViewStub
-        android:id="@+id/navigation_menu_stub"
-        android:inflatedId="@+id/navigation_menu_stub"
+    <ViewStub
+        android:id="@+id/navigation"
+        android:inflatedId="@+id/navigation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout="@layout/bottom_navigation_layout"
@@ -76,6 +77,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHeight_percent="0.075">
-    </ViewStub>-->
+    </ViewStub>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

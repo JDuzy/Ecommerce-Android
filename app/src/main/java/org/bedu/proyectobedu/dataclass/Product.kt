@@ -1,9 +1,11 @@
-package org.bedu.proyectobedu.model
+package org.bedu.proyectobedu.dataclass
 
 import android.os.Parcel
 import android.os.Parcelable
+import kotlin.random.Random
+import kotlin.random.Random.Default.nextDouble
 
-class Product(var id: Int, var title: String, var price: Float, var description: String, var category: String, var image: String):
+class Product(var id: Int, var title: String, var price: Float, var description: String, var category: String, var image: String ):
     Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -11,7 +13,7 @@ class Product(var id: Int, var title: String, var price: Float, var description:
         parcel.readFloat(),
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readString()!!
+        parcel.readString()!!,
     )
 
     override fun describeContents(): Int {
@@ -19,13 +21,14 @@ class Product(var id: Int, var title: String, var price: Float, var description:
     }
 
     override fun writeToParcel(p: Parcel?, p1: Int) {
-        p!!.writeInt(p1)
-        p.writeString(title)
-        p.writeFloat(price)
-        p.writeString(description)
-        p.writeString(category)
-        p.writeString(image)
-
+        with(p!!) {
+            writeInt(p1)
+            writeString(title)
+            writeFloat(price)
+            writeString(description)
+            writeString(category)
+            writeString(image)
+        }
     }
 
     companion object CREATOR : Parcelable.Creator<Product> {

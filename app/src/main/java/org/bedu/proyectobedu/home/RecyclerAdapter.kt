@@ -6,17 +6,16 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import org.bedu.proyectobedu.R
-import org.bedu.proyectobedu.model.Product
+import org.bedu.proyectobedu.dataclass.Product
 import kotlin.random.Random
 
 
-class RecyclerAdapter(val products: List<Product>): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(), View.OnClickListener {
 
-    lateinit var listener: View.OnClickListener
+class RecyclerAdapter(val products: List<Product>, val listener: (Product) -> Unit): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         private val name = view.findViewById<TextView>(R.id.productName)
@@ -37,29 +36,18 @@ class RecyclerAdapter(val products: List<Product>): RecyclerView.Adapter<Recycle
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_product, parent, false)
-        view.setOnClickListener(this)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(products[position])
-        val action = HomeFragmentDirections.actionHomeFragmentToProductDetailsFragment(products[position])
-        holder.itemView.setOnClickListener {
-            Navigation.findNavController(holder.itemView).navigate(action)
-
-        }
+        holder.itemView.setOnClickListener{listener(products[position])}
     }
 
     override fun getItemCount(): Int {
         return products.size
     }
 
-    fun setOnClickListener(listener : View.OnClickListener){
-        this.listener = listener
-    }
 
-    override fun onClick(view: View?) {
-        listener.let { it.onClick(view) }
-    }
 
 }
