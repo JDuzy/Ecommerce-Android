@@ -9,18 +9,24 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import org.bedu.proyectobedu.R
+import org.bedu.proyectobedu.databinding.FragmentLoginBinding
+import org.bedu.proyectobedu.databinding.FragmentRegistrationBinding
 
 class RegistrationFragment : Fragment(){
-    lateinit var registerBtn: Button
+
+    private var _binding : FragmentRegistrationBinding? = null
+    private val binding get() = _binding!!
+
+
     lateinit var emailEditText: TextInputEditText
     lateinit var passwordEditText: TextInputEditText
     lateinit var phoneEditText: TextInputEditText
     lateinit var nameEditText: TextInputEditText
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_registration, container, false)
-        initViews(view)
-        return view
+        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+        initViews()
+        return binding.root
     }
 
     private fun validateInputs() : Boolean{
@@ -31,13 +37,12 @@ class RegistrationFragment : Fragment(){
         return isEmailNotBlank && isPasswordNotBlank && isPhoneNotBlank && isNameNotBlank
     }
 
-    private fun initViews(view: View){
-        emailEditText = view.findViewById(R.id.registrationEmailEditText)
-        passwordEditText = view.findViewById(R.id.registrationPasswordEditText)
-        phoneEditText = view.findViewById(R.id.registrationPhoneEditText)
-        nameEditText = view.findViewById(R.id.registrationNameEditText)
-        registerBtn = view.findViewById(R.id.registrationBtn)
-        registerBtn.setOnClickListener {
+    private fun initViews(){
+        emailEditText = binding.registrationEmailEditText
+        passwordEditText = binding.registrationPasswordEditText
+        phoneEditText = binding.registrationPhoneEditText
+        nameEditText = binding.registrationNameEditText
+        binding.registrationBtn.setOnClickListener {
             register()
         }
     }
@@ -45,4 +50,11 @@ class RegistrationFragment : Fragment(){
     private fun register(){
         if (validateInputs()) findNavController().navigate(R.id.action_registrationFragment_to_loginFragment, null)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
+
 }

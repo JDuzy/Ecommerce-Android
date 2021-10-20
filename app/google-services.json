@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "909616762362",
+    "project_id": "android-ecommerce-7ade6",
+    "storage_bucket": "android-ecommerce-7ade6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909616762362:android:19a959a393e8ef61b7a843",
+        "android_client_info": {
+          "package_name": "org.bedu.proyectobedu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909616762362-1vrmefrc0863qsibnhraa1l0offc1ob6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABRy7gIUO_mWwxVQXYzBxhvha6pN_Ylo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909616762362-1vrmefrc0863qsibnhraa1l0offc1ob6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,6 +8,25 @@
     tools:context=".home.HomeFragment"
     android:background="@color/secondaryTextColor">
 
+  <com.google.android.material.progressindicator.LinearProgressIndicator
+      android:id="@+id/homeProgressBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+  <!--<ProgressBar
+      style="@android:style/Widget.ProgressBar.Horizontal"
+      android:id="@+id/homeProgressBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:visibility="gone"/>-->
+
   <TextView
       android:id="@+id/nearProductsText"
       android:layout_width="0dp"
@@ -30,7 +49,8 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/nearProductsText"
       app:layout_constraintBottom_toBottomOf="parent"
-      tools:listitem="@layout/item_product">
+      tools:listitem="@layout/item_product"
+      android:transitionGroup="true">
 
   </androidx.recyclerview.widget.RecyclerView>
 

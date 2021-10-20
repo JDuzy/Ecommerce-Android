@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="paymentMethod" type="id" />
+    <item name="orders" type="id" />
+    <item name="notifications" type="id" />
+    <item name="password" type="id" />
+    <item name="myLocations" type="id" />
+</resources>

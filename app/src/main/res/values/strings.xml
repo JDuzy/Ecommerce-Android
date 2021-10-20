@@ -23,4 +23,13 @@
     <string name="search">Search</string>
     <string name="near_products">Productos cerca de tí</string>
     <string name="interesetText">En 6 meses sin intereses</string>
+    <string name="productTransitionName">product_transition</string>
+    <string name="logout_text">Cerrar sesión</string>
+    <string name="user_not_found">Usuario no encontrado</string>
+    <string name="request_error">Error en la petición</string>
+    <string name="products_not_found">Productos no encontrados</string>
+    <string name="add_addres">Agregar dirección</string>
+    <string name="actualLocation">Ubicacion actual</string>
+    <string name="updateLocation">Actualizar</string>
+
 </resources>

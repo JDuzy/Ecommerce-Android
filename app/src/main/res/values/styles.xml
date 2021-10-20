@@ -7,11 +7,15 @@
         <item name="colorAccent">@color/secondaryLightColor</item>
         <item name="colorSecondary">@color/secondaryColor</item>
         <item name="android:textColor">@color/secondaryColor</item>
-        <item name="android:colorBackground">@color/secondaryColor</item>
+        <item name="android:colorBackground">@color/secondaryTextColor</item>
     </style>
 
     <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.BeduCompras.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
     </style>
 
 </resources>

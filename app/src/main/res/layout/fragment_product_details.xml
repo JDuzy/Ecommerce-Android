@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".home.ProductDetailsFragment"
-        android:background="@color/secondaryTextColor">
+        android:background="@color/secondaryTextColor"
+        android:transitionName="product_transition">
 
 
         <androidx.constraintlayout.widget.Guideline
@@ -47,6 +48,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toBottomOf="@+id/newProductText"
+            android:transitionName="productNameTransition"
             />
 
         <RatingBar
@@ -59,7 +61,8 @@
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toBottomOf="@+id/detailsProductName"
             android:progressTint="@color/primaryColor"
-            android:progressBackgroundTint="@color/secondaryColor"/>
+            android:progressBackgroundTint="@color/secondaryColor"
+            android:transitionName="ratingBarTransition"/>
 
         <TextView
             android:id="@+id/detailsRatings"
@@ -71,6 +74,7 @@
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/detailsRatingBar"
             app:layout_constraintTop_toBottomOf="@+id/detailsProductName"
+            android:transitionName="ratingsTextTransition"
             />
 
         <ImageView
@@ -81,7 +85,8 @@
             android:src="@drawable/ic_bedu_logo"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintTop_toBottomOf="@+id/detailsRatingBar" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsRatingBar"
+            android:transitionName="productImageTransition"/>
 
         <TextView
             android:id="@+id/detailsPrice"
@@ -92,6 +97,7 @@
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toBottomOf="@+id/detailsProductImage"
+            android:transitionName="priceTextTransition"
             />
 
         <TextView

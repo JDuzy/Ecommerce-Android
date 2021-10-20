@@ -14,7 +14,7 @@ import kotlin.random.Random
 
 
 
-class RecyclerAdapter(val products: List<Product>, val listener: (Product) -> Unit): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter(val products: List<Product>?, val listener: (View , Product) -> Unit): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
@@ -40,12 +40,15 @@ class RecyclerAdapter(val products: List<Product>, val listener: (Product) -> Un
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(products[position])
-        holder.itemView.setOnClickListener{listener(products[position])}
+        if (products != null){
+            holder.bind(products[position])
+            holder.itemView.transitionName = "product_${products[position].title}_transition"
+            holder.itemView.setOnClickListener{listener(holder.itemView, products[position])}
+        }
     }
 
     override fun getItemCount(): Int {
-        return products.size
+        return products?.size ?: 0
     }
 
 
