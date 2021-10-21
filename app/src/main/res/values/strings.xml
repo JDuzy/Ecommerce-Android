@@ -31,5 +31,19 @@
     <string name="add_addres">Agregar dirección</string>
     <string name="actualLocation">Ubicacion actual</string>
     <string name="updateLocation">Actualizar</string>
+    <string name="turnOnGPS">El GPS se encuentra apagado. Por favor enciendalo</string>
+    <string name="noLocationFound">No se ha podido encontrar la ubicación</string>
+    <string name="proceedPayment">Proceda al pago</string>
+    <string name="paymentData">Datos de pago</string>
+    <string name="payment_method">Método de pago actual</string>
+    <string name="resumee">Resumen</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="shipping">Envio</string>
+    <string name="total">Total</string>
+    <string name="shipping_price">$30.00</string>
+    <string name="pay">Pagar</string>
+    <string name="go_to_main_menu">Ir al menu principal</string>
+    <string name="thanks_for_your_purchase">Gracias por tu compra!</string>
+    <string name="package_will_arrive_soon">Recibirás tu paquete pronto</string>
 
 </resources>

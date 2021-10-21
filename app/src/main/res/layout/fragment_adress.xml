@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@color/secondaryTextColor"
     tools:context=".profile.AddressFragment"
-    android:paddingVertical="20dp">
+    android:paddingVertical="25dp">
 
     <ImageView
         android:id="@+id/closeBtn"
@@ -21,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:clickable="true"
         android:focusable="true"/>
-
 
     <TextView
         android:id="@+id/addAdressText"
@@ -67,21 +66,23 @@
 
             <TextView
                 android:id="@+id/actualAdressText"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Av Santa Fe 1232, CABA, Argentina. "
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/actualLocation">
-
             </TextView>
 
             <Button
+                android:id="@+id/updateLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop
+
+                    ="20dp"
                 android:drawableLeft="@drawable/ic_gps"
                 android:drawablePadding="10dp"
                 android:text="@string/updateLocation"

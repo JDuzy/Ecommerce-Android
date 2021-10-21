@@ -2,10 +2,12 @@ package org.bedu.proyectobedu.dataclass
 
 import android.os.Parcel
 import android.os.Parcelable
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
 import kotlin.random.Random
 import kotlin.random.Random.Default.nextDouble
 
-class Product(var id: Int, var title: String, var price: Float, var description: String, var category: String, var image: String ):
+open class Product(): RealmObject(),
     Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -16,6 +18,23 @@ class Product(var id: Int, var title: String, var price: Float, var description:
         parcel.readString()!!,
     )
 
+    @PrimaryKey var id: Int? = null
+    var title: String? = null
+    var price: Float? = null
+    var description: String? = null
+    var category: String? = null
+    var image: String? = null
+
+    constructor(id: Int?, title: String, price: Float, description: String, category: String, image: String) : this() {
+        this.id = id
+        this.title = title
+        this.price = price
+        this.description = description
+        this.category = category
+        this.image = image
+    }
+
+
     override fun describeContents(): Int {
         return 0
     }
@@ -24,7 +43,7 @@ class Product(var id: Int, var title: String, var price: Float, var description:
         with(p!!) {
             writeInt(p1)
             writeString(title)
-            writeFloat(price)
+            writeFloat(price!!)
             writeString(description)
             writeString(category)
             writeString(image)

@@ -12,6 +12,7 @@ import coil.api.load
 import com.google.android.material.color.MaterialColors
 import com.google.android.material.transition.MaterialContainerTransform
 import org.bedu.proyectobedu.R
+import org.bedu.proyectobedu.cart.CartItemRepository
 import org.bedu.proyectobedu.databinding.FragmentProductDetailsBinding
 import kotlin.random.Random
 
@@ -52,8 +53,9 @@ class ProductDetailsFragment : Fragment() {
         binding.detailsRatingBar.rating = Random.nextDouble(0.0, 5.0).toFloat()
         binding.detailsRatings.text = (0..300).random().toString()
         binding.descriptionText.text = args.product.description
-        binding.interestPrice.text = "$${String.format("%.2f", (args.product.price/6))}"
+        binding.interestPrice.text = "$${String.format("%.2f", (args.product.price!!/6))}"
         binding.addToCartBtn.setOnClickListener{
+            CartItemRepository.insertCartItem(args.product, 1)
             findNavController().navigate(R.id.action_productDetailsFragment_to_cartFragment, null)
         }
 

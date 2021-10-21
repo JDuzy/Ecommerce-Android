@@ -24,6 +24,10 @@ const val BEDU_URL = "https://www.bedu.org"
 
 class MainActivity : AppCompatActivity() {
 
+    companion object{
+        const val PERMISSION_ID = 33
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

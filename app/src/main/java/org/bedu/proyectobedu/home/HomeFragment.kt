@@ -15,6 +15,7 @@ import coil.api.load
 import com.google.android.material.transition.MaterialElevationScale
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import io.realm.Realm
 import kotlinx.coroutines.runBlocking
 import okhttp3.*
 import org.bedu.proyectobedu.R
@@ -39,8 +40,8 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        showProgressBar()
-        fetchProducts()
+        hideProgressBar()
+        setUpRecyclerView(findProducts())
         return binding.root
     }
 
@@ -50,7 +51,7 @@ class HomeFragment : Fragment() {
         view.doOnPreDraw { startPostponedEnterTransition() }
     }
 
-    private fun fetchProducts() {
+    /*private fun fetchProducts() {
         val okHttpClient = OkHttpClient()
         val request = Request.Builder()
             .url(productsRequestUrl)
@@ -78,6 +79,11 @@ class HomeFragment : Fragment() {
                 }
             }
         })
+    }*/
+
+    private fun findProducts(): List<Product>{
+        val realm = Realm.getDefaultInstance()
+        return realm.where(Product::class.java).findAll()
     }
 
 
@@ -91,7 +97,7 @@ class HomeFragment : Fragment() {
         requireActivity().findViewById<View>(R.id.appBarLayout).visibility = VISIBLE
     }
 
-    private fun setUpRecyclerView(list: List<Product>?) {
+    private fun setUpRecyclerView(list: List<Product>) {
         val rAdapter = RecyclerAdapter(list) { itemView, product ->
 
             exitTransition = MaterialElevationScale(false).apply {
