@@ -20,6 +20,7 @@ https://developer.android.com/studio
 - Networking (APIS)
 - Acceso al hardware
 - Persistencia y base de datos
+- Notificaciones
 - Patrones de arquitectura (MVVM, LiveData)
 - Gradle y preparación para el lanzamiento
 
