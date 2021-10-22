@@ -12,10 +12,16 @@ https://developer.android.com/studio
 - Views
 - Activities y Layouts
 - Listas
-- Fragments
-- Navigation Component
+- Fragments (Single activity architecture)
+- Navigation Component (Safe args y custom Parcelables)
 - Material Design
 - Menus
+- Animaciones y transiciones
+- Networking (APIS)
+- Acceso al hardware
+- Persistencia y base de datos
+- Notificaciones
+- Patrones de arquitectura (MVVM, LiveData)
 - Gradle y preparación para el lanzamiento
 
 ## License
