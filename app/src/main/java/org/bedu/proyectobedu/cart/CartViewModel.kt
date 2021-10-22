@@ -51,10 +51,6 @@ class CartViewModel: ViewModel() {
     }
 
     fun isCartEmpty(): Boolean{
-        if (cartItems.value == null){
-            println("Esta vacio")
-        }
-
         return cartItems.value?.let { it.size == 0 } ?: true
     }
 

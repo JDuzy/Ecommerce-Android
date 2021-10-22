@@ -45,5 +45,9 @@
     <string name="go_to_main_menu">Ir al menu principal</string>
     <string name="thanks_for_your_purchase">Gracias por tu compra!</string>
     <string name="package_will_arrive_soon">Recibirás tu paquete pronto</string>
+    <string name="channel_payments">Pagos</string>
+    <string name="payment_descriptions">Notificaciones acerca de los pagos</string>
+    <string name="purchase_title">Compra realizada</string>
+    <string name="purchase_body">Tu pedido llegará en una semana</string>
 
 </resources>
