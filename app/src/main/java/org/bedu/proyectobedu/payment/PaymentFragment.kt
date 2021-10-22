@@ -14,8 +14,10 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavDeepLinkBuilder
 import androidx.navigation.fragment.findNavController
 import io.realm.Realm
+import org.bedu.proyectobedu.MainActivity
 import org.bedu.proyectobedu.R
 import org.bedu.proyectobedu.cart.CartItem
 import org.bedu.proyectobedu.cart.CartViewModel
@@ -47,7 +49,7 @@ class PaymentFragment: Fragment() {
         initViews()
         binding.payBtn.setOnClickListener {
             cartViewModel.deleteAll()
-            simpleNotification()
+            touchNotification()
             findNavController().navigate(R.id.action_paymentFragment_to_successfulPaymentFragment)
         }
         return binding.root
@@ -77,13 +79,23 @@ class PaymentFragment: Fragment() {
     }
 
 
-    private fun simpleNotification() {
+    private fun touchNotification() {
+
+        val pendingIntent = NavDeepLinkBuilder(requireContext())
+            .setComponentName(MainActivity::class.java)
+            .setGraph(R.navigation.mobile_navigation)
+            .setDestination(R.id.successfulPaymentFragment)
+            .createPendingIntent()
+
+
         val builder = NotificationCompat.Builder(requireActivity(), CHANNEL_OTHERS)
             .setSmallIcon(R.drawable.ic_bedu_logo)
             .setColor(ContextCompat.getColor(requireContext(), R.color.primaryColor))
             .setContentTitle(getString(R.string.purchase_title))
             .setContentText(getString(R.string.purchase_body))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(pendingIntent)
+            .setAutoCancel(true)  //Notification disappears when clicked
 
         with(NotificationManagerCompat.from(requireActivity()), {
             notify(20, builder.build())

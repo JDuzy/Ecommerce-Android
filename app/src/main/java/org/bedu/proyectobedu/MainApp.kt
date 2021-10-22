@@ -14,7 +14,7 @@ class MainApp: Application() {
         Realm.init(this)
 
         val array = JSONArray(getJsonString())
-
+        //Bootstraps initial products
         val config = RealmConfiguration.Builder()
             .initialData{
 
