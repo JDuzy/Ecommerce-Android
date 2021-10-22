@@ -1,4 +1,4 @@
-package org.bedu.proyectobedu.profile
+package org.bedu.proyectobedu.profile.viewmodel
 
 import android.content.Context
 import androidx.fragment.app.FragmentActivity
@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import org.bedu.proyectobedu.profile.model.GPSLocator
 
 class AddressModelView(): ViewModel() {
 

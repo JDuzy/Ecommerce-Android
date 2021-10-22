@@ -1,27 +1,14 @@
-package org.bedu.proyectobedu.profile
+package org.bedu.proyectobedu.profile.fragments
 
-import android.Manifest
-import android.annotation.SuppressLint
-import android.content.Context
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.location.Geocoder
-import android.location.LocationManager
 import android.os.Bundle
-import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
 import androidx.fragment.app.viewModels
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import org.bedu.proyectobedu.MainActivity.Companion.PERMISSION_ID
-import org.bedu.proyectobedu.R
 import org.bedu.proyectobedu.databinding.FragmentAdressBinding
-import java.util.*
+import org.bedu.proyectobedu.profile.viewmodel.AddressModelView
 
 class AddressFragment : BottomSheetDialogFragment(){
 

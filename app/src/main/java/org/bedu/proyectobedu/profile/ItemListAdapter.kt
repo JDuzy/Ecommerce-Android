@@ -1,14 +1,13 @@
 package org.bedu.proyectobedu.profile
 
-import android.annotation.SuppressLint
 import android.app.Activity
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import org.bedu.proyectobedu.R
+import org.bedu.proyectobedu.profile.model.ProfileItem
 
 class ItemListAdapter(val context: Activity, val array: ArrayList<ProfileItem>): ArrayAdapter<ProfileItem>(context, R.layout.profile_item, array) {
 

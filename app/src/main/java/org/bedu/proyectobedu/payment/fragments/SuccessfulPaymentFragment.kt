@@ -1,4 +1,4 @@
-package org.bedu.proyectobedu.payment
+package org.bedu.proyectobedu.payment.fragments
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

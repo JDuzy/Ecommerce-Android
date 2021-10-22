@@ -1,9 +1,11 @@
-package org.bedu.proyectobedu.cart
+package org.bedu.proyectobedu.cart.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import org.bedu.proyectobedu.cart.CartItemRepository.Companion.insertCartItem
-import org.bedu.proyectobedu.dataclass.Product
+import org.bedu.proyectobedu.cart.model.CartItem
+import org.bedu.proyectobedu.cart.repository.CartItemRepository
+import org.bedu.proyectobedu.cart.repository.CartItemRepository.Companion.insertCartItem
+import org.bedu.proyectobedu.home.model.Product
 
 class CartViewModel: ViewModel() {
 

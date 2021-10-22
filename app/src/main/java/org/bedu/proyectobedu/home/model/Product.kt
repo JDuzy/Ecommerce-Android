@@ -1,11 +1,9 @@
-package org.bedu.proyectobedu.dataclass
+package org.bedu.proyectobedu.home.model
 
 import android.os.Parcel
 import android.os.Parcelable
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
-import kotlin.random.Random
-import kotlin.random.Random.Default.nextDouble
 
 open class Product(): RealmObject(),
     Parcelable {

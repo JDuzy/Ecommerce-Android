@@ -9,6 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import coil.api.load
 import org.bedu.proyectobedu.R
+import org.bedu.proyectobedu.cart.model.CartItem
+import org.bedu.proyectobedu.cart.viewmodel.CartViewModel
 
 class CartItemListAdapter(val context: Activity, var array: ArrayList<CartItem>, private val cartViewModel: CartViewModel): ArrayAdapter<CartItem>(context, R.layout.profile_item, array) {
 

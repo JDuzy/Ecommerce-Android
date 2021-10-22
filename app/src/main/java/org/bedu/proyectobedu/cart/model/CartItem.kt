@@ -1,8 +1,7 @@
-package org.bedu.proyectobedu.cart
+package org.bedu.proyectobedu.cart.model
 
 import io.realm.RealmObject
-import io.realm.annotations.PrimaryKey
-import org.bedu.proyectobedu.dataclass.Product
+import org.bedu.proyectobedu.home.model.Product
 
 open class CartItem () : RealmObject(){
 

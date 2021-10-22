@@ -3,8 +3,7 @@ package org.bedu.proyectobedu
 import android.app.Application
 import io.realm.Realm
 import io.realm.RealmConfiguration
-import io.realm.kotlin.createObject
-import org.bedu.proyectobedu.dataclass.Product
+import org.bedu.proyectobedu.home.model.Product
 import org.json.JSONArray
 
 class MainApp: Application() {

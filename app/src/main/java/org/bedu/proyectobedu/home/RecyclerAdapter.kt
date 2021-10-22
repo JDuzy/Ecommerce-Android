@@ -9,12 +9,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import org.bedu.proyectobedu.R
-import org.bedu.proyectobedu.dataclass.Product
+import org.bedu.proyectobedu.home.model.Product
 import kotlin.random.Random
 
 
 
-class RecyclerAdapter(val products: List<Product>, val listener: (View , Product) -> Unit): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter(val products: List<Product>, val listener: (View, Product) -> Unit): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){

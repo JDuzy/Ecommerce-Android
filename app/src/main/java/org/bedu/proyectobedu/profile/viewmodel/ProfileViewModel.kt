@@ -1,20 +1,18 @@
-package org.bedu.proyectobedu.profile
+package org.bedu.proyectobedu.profile.viewmodel
 
-import android.content.Context
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import coil.api.load
-import okhttp3.*
 import org.bedu.proyectobedu.R
-import org.json.JSONObject
-import java.io.IOException
+import org.bedu.proyectobedu.profile.model.Profile
+import org.bedu.proyectobedu.profile.model.ProfileItem
+import org.bedu.proyectobedu.profile.repository.ProfileRepository
 
 class ProfileViewModel: ViewModel() {
 
     var profileLiveData: LiveData<Profile> = ProfileRepository.profileLiveData
 
-    val itemList : ArrayList<ProfileItem> = arrayListOf(ProfileItem("Mis direcciones", R.drawable.ic_location_light, R.id.myLocations),
+    val itemList : ArrayList<ProfileItem> = arrayListOf(
+        ProfileItem("Mis direcciones", R.drawable.ic_location_light, R.id.myLocations),
         ProfileItem("Métodos de pago", R.drawable.ic_credit_card, R.id.paymentMethod),
         ProfileItem("Pedidos", R.drawable.ic_history, R.id.orders),
         ProfileItem("Notificaciones", R.drawable.ic_notifications, R.id.notifications),

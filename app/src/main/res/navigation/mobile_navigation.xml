@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="org.bedu.proyectobedu.home.HomeFragment"
+        android:name="org.bedu.proyectobedu.home.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="org.bedu.proyectobedu.cart.CartFragment"
+        android:name="org.bedu.proyectobedu.cart.fragments.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" >
         <action
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="org.bedu.proyectobedu.profile.ProfileFragment"
+        android:name="org.bedu.proyectobedu.profile.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -82,18 +82,18 @@
     </fragment>
     <fragment
         android:id="@+id/productDetailsFragment"
-        android:name="org.bedu.proyectobedu.home.ProductDetailsFragment"
+        android:name="org.bedu.proyectobedu.home.fragments.ProductDetailsFragment"
         android:label="ProductDetailsFragment" >
-        <argument
-            android:name="product"
-            app:argType="org.bedu.proyectobedu.dataclass.Product" />
         <action
             android:id="@+id/action_productDetailsFragment_to_cartFragment"
             app:destination="@id/cartFragment" />
+        <argument
+            android:name="product"
+            app:argType="org.bedu.proyectobedu.home.model.Product" />
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
-        android:name="org.bedu.proyectobedu.payment.PaymentFragment"
+        android:name="org.bedu.proyectobedu.payment.fragments.PaymentFragment"
         android:label="fragment_payment"
         tools:layout="@layout/fragment_payment" >
         <action
@@ -102,7 +102,7 @@
     </fragment>
     <fragment
         android:id="@+id/successfulPaymentFragment"
-        android:name="org.bedu.proyectobedu.payment.SuccessfulPaymentFragment"
+        android:name="org.bedu.proyectobedu.payment.fragments.SuccessfulPaymentFragment"
         android:label="fragment_successful_payment"
         tools:layout="@layout/fragment_successful_payment" >
         <action

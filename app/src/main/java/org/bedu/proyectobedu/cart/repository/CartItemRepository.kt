@@ -1,7 +1,8 @@
-package org.bedu.proyectobedu.cart
+package org.bedu.proyectobedu.cart.repository
 
 import io.realm.Realm
-import org.bedu.proyectobedu.dataclass.Product
+import org.bedu.proyectobedu.cart.model.CartItem
+import org.bedu.proyectobedu.home.model.Product
 
 class CartItemRepository {
 
@@ -24,7 +25,7 @@ class CartItemRepository {
             realm.commitTransaction()
         }
 
-        fun insertCartItem(product: Product, amount: Int) : CartItem{
+        fun insertCartItem(product: Product, amount: Int) : CartItem {
             val realm = Realm.getDefaultInstance()
             realm.beginTransaction()
             val cartItem = realm.createObject(CartItem::class.java)

@@ -1,29 +1,20 @@
-package org.bedu.proyectobedu.home
+package org.bedu.proyectobedu.home.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.view.*
 import android.view.View.GONE
 import androidx.fragment.app.Fragment
 import android.view.View.VISIBLE
-import android.widget.Toast
 import androidx.core.view.doOnPreDraw
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
-import coil.api.load
 import com.google.android.material.transition.MaterialElevationScale
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import io.realm.Realm
-import kotlinx.coroutines.runBlocking
-import okhttp3.*
 import org.bedu.proyectobedu.R
 import org.bedu.proyectobedu.databinding.FragmentHomeBinding
-import org.bedu.proyectobedu.dataclass.Product
-import org.json.JSONObject
-import java.io.IOException
-
+import org.bedu.proyectobedu.home.RecyclerAdapter
+import org.bedu.proyectobedu.home.model.Product
 
 
 class HomeFragment : Fragment() {
@@ -51,35 +42,6 @@ class HomeFragment : Fragment() {
         view.doOnPreDraw { startPostponedEnterTransition() }
     }
 
-    /*private fun fetchProducts() {
-        val okHttpClient = OkHttpClient()
-        val request = Request.Builder()
-            .url(productsRequestUrl)
-            .build()
-
-        var result : List<Product>? = null
-
-        okHttpClient.newCall(request).enqueue(object: Callback {
-
-            override fun onFailure(call: Call, e: IOException) {
-                Toast.makeText(context, resources.getString(R.string.request_error), Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string()
-                requireActivity().runOnUiThread{
-                    if (response.isSuccessful && body != null){
-                        val listProductType = object : TypeToken<List<Product>>() {}.type
-                        result = Gson().fromJson(body, listProductType)
-                        setUpRecyclerView(result)
-                    }
-                    else
-                        Toast.makeText(context, resources.getString(R.string.products_not_found), Toast.LENGTH_SHORT).show()
-                    hideProgressBar()
-                }
-            }
-        })
-    }*/
 
     private fun findProducts(): List<Product>{
         val realm = Realm.getDefaultInstance()

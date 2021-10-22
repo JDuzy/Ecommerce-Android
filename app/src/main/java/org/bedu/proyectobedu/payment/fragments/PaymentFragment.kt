@@ -1,4 +1,4 @@
-package org.bedu.proyectobedu.payment
+package org.bedu.proyectobedu.payment.fragments
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -16,11 +16,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavDeepLinkBuilder
 import androidx.navigation.fragment.findNavController
-import io.realm.Realm
 import org.bedu.proyectobedu.MainActivity
 import org.bedu.proyectobedu.R
-import org.bedu.proyectobedu.cart.CartItem
-import org.bedu.proyectobedu.cart.CartViewModel
+import org.bedu.proyectobedu.cart.model.CartItem
+import org.bedu.proyectobedu.cart.viewmodel.CartViewModel
 import org.bedu.proyectobedu.databinding.FragmentPaymentBinding
 
 class PaymentFragment: Fragment() {

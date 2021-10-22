@@ -1,4 +1,4 @@
-package org.bedu.proyectobedu.cart
+package org.bedu.proyectobedu.cart.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,12 +8,13 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ListView
-import androidx.core.view.isGone
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import org.bedu.proyectobedu.R
+import org.bedu.proyectobedu.cart.model.CartItem
+import org.bedu.proyectobedu.cart.CartItemListAdapter
+import org.bedu.proyectobedu.cart.viewmodel.CartViewModel
 import org.bedu.proyectobedu.databinding.FragmentCartBinding
 
 class CartFragment : Fragment() {

@@ -1,4 +1,4 @@
-package org.bedu.proyectobedu.home
+package org.bedu.proyectobedu.home.fragments
 
 import android.graphics.Color
 import android.os.Bundle
@@ -9,10 +9,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import coil.api.load
-import com.google.android.material.color.MaterialColors
 import com.google.android.material.transition.MaterialContainerTransform
 import org.bedu.proyectobedu.R
-import org.bedu.proyectobedu.cart.CartItemRepository
+import org.bedu.proyectobedu.cart.repository.CartItemRepository
 import org.bedu.proyectobedu.databinding.FragmentProductDetailsBinding
 import kotlin.random.Random
 

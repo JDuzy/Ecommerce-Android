@@ -1,4 +1,4 @@
-package org.bedu.proyectobedu.profile
+package org.bedu.proyectobedu.profile.model
 
 import android.Manifest
 import android.annotation.SuppressLint

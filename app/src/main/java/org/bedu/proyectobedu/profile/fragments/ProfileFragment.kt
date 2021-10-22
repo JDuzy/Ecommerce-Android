@@ -1,4 +1,4 @@
-package org.bedu.proyectobedu.profile
+package org.bedu.proyectobedu.profile.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,16 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import coil.api.load
-import okhttp3.*
 import org.bedu.proyectobedu.R
 import org.bedu.proyectobedu.databinding.FragmentProfileBinding
-import org.json.JSONObject
-import java.io.IOException
-import java.util.*
-import kotlin.collections.ArrayList
+import org.bedu.proyectobedu.profile.ItemListAdapter
+import org.bedu.proyectobedu.profile.viewmodel.ProfileViewModel
 
 class ProfileFragment : Fragment() {
 

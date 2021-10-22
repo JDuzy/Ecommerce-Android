@@ -1,11 +1,10 @@
-package org.bedu.proyectobedu.profile
+package org.bedu.proyectobedu.profile.repository
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import okhttp3.*
-import org.bedu.proyectobedu.R
+import org.bedu.proyectobedu.profile.model.Profile
 import org.json.JSONObject
 import java.io.IOException
 
