@@ -18,8 +18,6 @@ import okhttp3.RequestBody
 
 
 
-
-
 class LoginFragment: Fragment() {
 
     private val loginUrl = "https://reqres.in/api/login"

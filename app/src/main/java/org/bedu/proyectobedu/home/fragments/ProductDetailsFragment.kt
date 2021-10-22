@@ -22,22 +22,16 @@ class ProductDetailsFragment : Fragment() {
     private val binding get() = _binding!!
     private val args: ProductDetailsFragmentArgs by navArgs()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
         _binding = FragmentProductDetailsBinding.inflate(inflater, container, false)
         initViews()
 
         sharedElementEnterTransition = MaterialContainerTransform().apply {
-            // The drawing view is the id of the view above which the container transform
-            // will play in z-space.
+            // The drawing view is the id of the view above which the container transform will play in z-space.
             drawingViewId = binding.root.rootView.id
             duration = resources.getInteger(R.integer.transition_motion_duration_medium).toLong()
-            // Set the color of the scrim to transparent as we also want to animate the
-            // list fragment out of view
+            // Set the color of the scrim to transparent as we also want to animate the list fragment out of view
             scrimColor = Color.TRANSPARENT
             setAllContainerColors(resources.getColor(R.color.secondaryTextColor))
         }

@@ -23,7 +23,7 @@ class RegistrationFragment : Fragment(){
     lateinit var phoneEditText: TextInputEditText
     lateinit var nameEditText: TextInputEditText
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
         initViews()
         return binding.root

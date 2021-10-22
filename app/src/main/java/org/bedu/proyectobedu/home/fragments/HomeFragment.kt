@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.View.VISIBLE
 import androidx.core.view.doOnPreDraw
 import androidx.core.view.isVisible
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.transition.MaterialElevationScale
@@ -14,14 +15,15 @@ import io.realm.Realm
 import org.bedu.proyectobedu.R
 import org.bedu.proyectobedu.databinding.FragmentHomeBinding
 import org.bedu.proyectobedu.home.RecyclerAdapter
+import org.bedu.proyectobedu.home.fragments.viewmodel.HomeViewModel
 import org.bedu.proyectobedu.home.model.Product
 
 
 class HomeFragment : Fragment() {
 
-    private val productsRequestUrl = "https://fakestoreapi.com/products"
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private val homeViewModel: HomeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         hideProgressBar()
-        setUpRecyclerView(findProducts())
+        setUpRecyclerView(homeViewModel.findAllProducts())
         return binding.root
     }
 
@@ -42,11 +44,6 @@ class HomeFragment : Fragment() {
         view.doOnPreDraw { startPostponedEnterTransition() }
     }
 
-
-    private fun findProducts(): List<Product>{
-        val realm = Realm.getDefaultInstance()
-        return realm.where(Product::class.java).findAll()
-    }
 
 
     private fun inflateBottomNavStub(){
@@ -61,18 +58,7 @@ class HomeFragment : Fragment() {
 
     private fun setUpRecyclerView(list: List<Product>) {
         val rAdapter = RecyclerAdapter(list) { itemView, product ->
-
-            exitTransition = MaterialElevationScale(false).apply {
-                duration = resources.getInteger(R.integer.transition_motion_duration_medium).toLong()
-            }
-            reenterTransition = MaterialElevationScale(true).apply {
-                duration = resources.getInteger(R.integer.transition_motion_duration_medium).toLong()
-            }
-
-            val extras = FragmentNavigatorExtras(itemView to getString(R.string.productTransitionName))
-            val action = HomeFragmentDirections.actionHomeFragmentToProductDetailsFragment(product)
-
-            findNavController().navigate(action, extras)
+            transitionToProductDetails(itemView, product)
         }
         binding.recycler.adapter = rAdapter
     }
@@ -87,6 +73,20 @@ class HomeFragment : Fragment() {
         binding.homeProgressBar.visibility = GONE
         binding.nearProductsText.visibility = VISIBLE
         binding.recycler.visibility = VISIBLE
+    }
+
+    private fun transitionToProductDetails(itemView: View, product: Product){
+        exitTransition = MaterialElevationScale(false).apply {
+            duration = resources.getInteger(R.integer.transition_motion_duration_medium).toLong()
+        }
+        reenterTransition = MaterialElevationScale(true).apply {
+            duration = resources.getInteger(R.integer.transition_motion_duration_medium).toLong()
+        }
+
+        val extras = FragmentNavigatorExtras(itemView to getString(R.string.productTransitionName))
+        val action = HomeFragmentDirections.actionHomeFragmentToProductDetailsFragment(product)
+
+        findNavController().navigate(action, extras)
     }
 
 }

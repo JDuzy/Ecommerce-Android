@@ -39,17 +39,11 @@ class PaymentFragment: Fragment() {
     }
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentPaymentBinding.inflate(inflater, container, false)
         initViews()
         binding.payBtn.setOnClickListener {
-            cartViewModel.deleteAll()
-            touchNotification()
-            findNavController().navigate(R.id.action_paymentFragment_to_successfulPaymentFragment)
+            onPayedProduct()
         }
         return binding.root
     }
@@ -99,6 +93,12 @@ class PaymentFragment: Fragment() {
         with(NotificationManagerCompat.from(requireActivity()), {
             notify(20, builder.build())
         })
+    }
+
+    private fun onPayedProduct(){
+        cartViewModel.deleteAll()
+        touchNotification()
+        findNavController().navigate(R.id.action_paymentFragment_to_successfulPaymentFragment)
     }
 
 }
