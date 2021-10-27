@@ -11,7 +11,7 @@ https://developer.android.com/studio
 
 - Views
 - Activities y Layouts
-- Listas
+- Listas y recyclers
 - Fragments (Single activity architecture)
 - Navigation Component (Safe args y custom Parcelables)
 - Material Design
